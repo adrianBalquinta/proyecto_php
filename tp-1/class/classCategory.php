@@ -1,5 +1,5 @@
 <?php
-//include_once('class/db_connect.php'); //tiene que estar en el header
+
 
 class sqlCategoria{
 

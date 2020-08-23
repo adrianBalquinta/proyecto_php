@@ -21,12 +21,6 @@ function redirect($pURL)
 }
  
 
-//redimencionar imagen
-/* 
-	$tamanhos = array(0 => array('nombre'=>'big','ancho'=>'5000','alto'=>'10000'),
-					  1 => array('nombre'=>'small','ancho'=>'500','alto'=>'1000'),
-					  2 => array('nombre'=>'thumb','ancho'=>'50','alto'=>'70'));
-*/
 				  
 function redimensionar($ruta,$file_name,$uploadedfile,$id,$tamanhos){
 
@@ -34,7 +28,7 @@ function redimensionar($ruta,$file_name,$uploadedfile,$id,$tamanhos){
 	$filename = stripslashes($file_name);
  	$extension = getExtension($filename);
  	$extension = strtolower($extension);
-	if (/*($extension != "jpg") && ($extension != "jpeg") && */($extension != "png") ) {
+	if (($extension != "png") ) {
  		$errors=1;
  	}else{
 		$size=filesize($uploadedfile);
@@ -53,11 +47,7 @@ function redimensionar($ruta,$file_name,$uploadedfile,$id,$tamanhos){
 		}else{
 			$src = imagecreatefromgif($uploadedfile);
 		}
-// 		echo $scr;
-         
-		 // $size = getimagesize($uploadedfile); --> [ancho,alto]
-		 // $width = $size[0];
-		 // $height = $size[1];
+
 		 
 		list($width,$height)=getimagesize($uploadedfile);
 		foreach($tamanhos as $tam){
@@ -80,7 +70,7 @@ function redimensionar($ruta,$file_name,$uploadedfile,$id,$tamanhos){
 			}
 			imagecopyresampled($tmp,$src,0,0,0,0,$newwidth,$newheight,$width,$height);
 			
-			// img_0_small.png
+		
 			$filename = $ruta;
 			if($extension == "png"){
 				$rojo = imagecolorallocate($tmp, 234, 234, 234);

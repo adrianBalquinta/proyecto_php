@@ -17,9 +17,7 @@ if(  !in_array('marcas',$_SESSION['usuario']['permisos'])){
 	include('side_bar.php');
 	
 	$marcas = new Marca($con); 
-	/*
-	$query = 'SELECT * FROM permisos';
-	$permisos = $con->query($query);*/
+
 	
 	if(isset($_GET['edit'])){
             $marca = $marcas->get($_GET['edit']); 

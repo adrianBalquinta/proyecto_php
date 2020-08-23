@@ -50,10 +50,7 @@ if (isset($_POST['Enviar'])) {
    }
 }
 
-//  echo "formulario enviado!<p>&nbsp;</p>";
-//  $resultado->closeCursor();
 
-//  echo '<a href="../contact.php" title="Ir la página anterior">Volver</a>';
 
 
 ?>

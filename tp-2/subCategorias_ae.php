@@ -70,8 +70,9 @@ require('header.php');
                     </div>
                 </div> 
                 <input type="hidden" class="form-control" id="id" name="id_categoria" placeholder="" value="<?php echo (isset($categoria->id_categoria)?$categoria->id_categoria:'');?>">
-                <!--<input type="hidden" class="form-control" id="id" name="id_padre" placeholder="" value="<?php// echo (isset($categoria->id_padre)?$categoria->id_padre:'');?>">
-            </form>
+                </form>
+                <!--
+           
           </div>
  </div>                         
           

@@ -1,7 +1,7 @@
 <?php
  require_once('class/classProduct.php');
  require_once('category.php');
- //var_dump($id_categoria);
+ 
 ?>
 
 

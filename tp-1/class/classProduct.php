@@ -1,5 +1,5 @@
 <?php
-//require_once 'db_connect.php';
+
 
 class sqlProducto{
     var $con;

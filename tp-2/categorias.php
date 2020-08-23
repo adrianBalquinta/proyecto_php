@@ -14,7 +14,7 @@ if(  !in_array('categorias',$_SESSION['usuario']['permisos'])){
 	 $categorias = new Categoria($con);
 	include('side_bar.php');
 	 
-	//var_dump($_POST); die(); 
+
 	if(isset($_POST['formulario_categorias'])){ 
 	    if($_POST['id_categoria'] > 0){
                 $categorias->edit($_POST); 
@@ -36,17 +36,7 @@ if(  !in_array('categorias',$_SESSION['usuario']['permisos'])){
       header('Location: categorias.php');	
 }
     
-    /*
-	if(isset($_GET['del'])){
-			$resp = $categorias->del($_GET['del']) 	;
-            if($resp == 1){
-      	header('Location: categorias.php');	
-      // echo '<script>window.location="_admin\categorias.php"';
-			}
-      echo '<script>alert("'.$resp.'");</script>';
-      //header('Location: categorias.php');
-      
-    }*/
+
     
    
  

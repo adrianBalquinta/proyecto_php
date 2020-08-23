@@ -13,7 +13,7 @@ if(  !in_array('subcategorias',$_SESSION['usuario']['permisos'])){
 	 $categorias = new Categoria($con);
 	include('side_bar.php');
 	 
-	//var_dump($_POST); die(); 
+ 
 	if(isset($_POST['formulario_subcategorias'])){ 
 	    if($_POST['id_categoria'] > 0){
                 $categorias->edit($_POST); 
@@ -27,29 +27,7 @@ if(  !in_array('subcategorias',$_SESSION['usuario']['permisos'])){
     //echo '<script>window.location="_admin\categorias.php"';
     }
 
- /*       	
-    
-    if(isset($_GET['delpadre'])){
-        $resp = $categorias->delCategoriaPadre($_GET['delpadre']) 	;
-        if($resp == 1){
-         //    header('Location: subCategorias.php');
-         //   echo '<script>window.location="_admin\categorias.php"';	
-        }
-        echo '<script>alert("'.$resp.'");</script>';
 
-}
-    
-
-if(isset($_GET['del'])){
-			$resp = $categorias->del($_GET['del']) 	;
-            if($resp == 1){
-      //   header('Location: subCategorias.php');
-     //   echo '<script>window.location="_admin\categorias.php"';		
-			}
-      echo '<script>alert("'.$resp.'");</script>';
-      echo "<script>document.location.href='subCategorias.php';</script>\n"; 
-
-}*/
     
 if(isset($_GET['del'])){
       

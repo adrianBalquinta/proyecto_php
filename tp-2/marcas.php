@@ -27,16 +27,7 @@ if(  !in_array('marcas',$_SESSION['usuario']['permisos'])){
 		
 		 header('Location: marcas.php');
 	}	
-	/* 
-	if(isset($_GET['del'])){
-			$resp = $marcas->del($_GET['del']) 	;
-            if($resp == 1){
-				 header('Location: marcas.php');	
-			}
-			 echo '<script>alert("'.$resp.'");</script>';
-			 echo "<script>document.location.href='marcas.php';</script>\n"; 
-	}
-	*/
+
 	if(isset($_GET['del'])){
 		 $marcas->deshabilitar($_GET['del']) ;
 		

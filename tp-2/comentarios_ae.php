@@ -10,14 +10,7 @@ require('header.php');
       $userMenu = 'Productos';
 	include('side_bar.php');
 	
-	/*
-	   if(  !in_array('new.add',$_SESSION['usuario']['permisos']) &&
-			!in_array('new.del',$_SESSION['usuario']['permisos']) &&		
-			!in_array('new.edit',$_SESSION['usuario']['permisos']) &&
-			!in_array('new.see',$_SESSION['usuario']['permisos'])){ 
-				header('Location: index.php');
-			}
-	*/
+
 	$prod = new ABMproductos($con); 
 	
 	if(isset($_GET['edit'])){

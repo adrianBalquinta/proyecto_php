@@ -76,32 +76,7 @@
     </div>
 
 
-    <!-- <div class="container-fluid col-4 fa-align-center text-center">
-		  <form action="index.php" method="post" class=" from-horizontal">
-                <div class="form-group">
-                    <div class="col-sm-12">                 
-                     <h4>Usuario</h4>
-                        <input type="text" class="form-control " id="usuario" name="usuario" placeholder="" value="<?php// echo isset($usuario->usuario)?$usuario->usuario:'';?>">                    
-                </div> 
-                </div> 
-                 <div class="form-group">
-                     <div class="col-sm-12">
-                     <br>
-                     <h4>Contraseña</h4>
-                        <input type="password" class="form-control " id="clave" name="clave" placeholder="">
-                        <br>
-                    </div>
-                </div>               
-                <div class="form-group"> 
-                <div class="col-md-12">                   
-                    <br>
-                    <div class="text-center">
-                    <button type="submit" class="btn btn-success" name="login">Entrar</button>
-                    </div>
-                    </div> 
-                </div> 
-            </form>
-            </div> -->
+
 
  
 <!-- <?php 

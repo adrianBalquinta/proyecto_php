@@ -112,7 +112,7 @@ Class Marca{
 				}
             }
             $sql = "UPDATE marc SET ".implode(',',$columns)." WHERE id_marca = ".$id;
-            //echo $sql; die();
+           
             $this->con->exec($sql);
 			 
 	} 

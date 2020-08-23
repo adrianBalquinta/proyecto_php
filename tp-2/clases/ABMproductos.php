@@ -35,46 +35,7 @@ Class ABMproductos{
             return $resultado; 
 	}
 	
-/*
-$sql = "
-	DELIMITER $$
-	CREATE DEFINER=`root`@`localhost` PROCEDURE `Busquedaproductofiltros2`(IN `_nom` VARCHAR(100), IN `_mc` VARCHAR(100), IN `_cat` VARCHAR(100), IN `_subcat` VARCHAR(100))
-	SELECT 
-		  p.id_producto id_producto , 
-		  p.nombre nombre,
-		  p.precio precio,
-		  p.descripcion descripcion,
-		  p.deshabilitado deshabilitado,
-		  m.id_marca id_marca,
-		  m.descripcion descmarca,      
-		  cat.id_categoria id_categoria,
-		  cat.nombre descrpcategoria,
-		  Subcat.id_categoria id_subcategoria,
-		  Subcat.nombre descrpSubcategoria
-		  
-	FROM 
-		 prod p 
-	INNER JOIN 
-		 categ Subcat ON Subcat.id_categoria = p.id_categoria 
-	LEFT JOIN 
-		 categ cat ON  cat.id_categoria = Subcat.id_padre
-	INNER JOIN 
-		  marc m on m.id_marca = p.id_marca 
-	WHERE 
-		  p.nombre LIKE CONCAT('%', _nom , '%')
-	AND
-		 m.id_marca = (CASE WHEN _mc = '' THEN m.id_marca else _mc END )
-	AND
-		cat.id_categoria = (CASE WHEN _cat = '' THEN cat.id_categoria else _cat END )
-	AND
-		Subcat.id_categoria =(CASE WHEN _subcat = '' THEN Subcat.id_categoria else  _subcat END )
-	AND
-		p.deshabilitado = 0
-	
-	$$
-	DELIMITER ";
 
-*/
 
 	/**
 	* obtengo un producto
@@ -111,8 +72,7 @@ $sql = "
 			
 
 			
-			/*echo '<pre>';
-			var_dump($usuario);echo '</pre>'; */
+		
             return $producto;
 	}
 	
@@ -186,7 +146,7 @@ $sql = "
 				}
 			}
 		}
-		//var_dump($datos);die();
+		
 		$sql = "INSERT INTO prod(".implode(',',$columns).") VALUES('".implode("','",$datos)."')";
 		//echo $sql;die();
 		

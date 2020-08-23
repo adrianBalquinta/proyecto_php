@@ -55,18 +55,7 @@ require('header.php');
                         <input type="text" class="form-control" id="precio" name="precio" placeholder="" value="<?php echo isset($producto->precio)?$producto->precio:'';?>" required>
                     </div>
                 </div> 
-                 <!--<div class="form-group">
-                    <label for="calve" class="col-sm-2 control-label">Clave</label>
-                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="clave" name="clave" placeholder="">
-                    </div>
-                </div> 
-                 <div class="form-group">
-                    <label for="imagen" class="col-sm-2 control-label">Imagen</label>
-                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="imagen" name="imagen" placeholder="" value="<?php //echo isset($producto->imagen)?$producto->imagen:'';?>" required>
-                    </div>
-                </div> --->
+          
             
                 <div class="form-group">
                     <label for="id_marca" class="col-sm-2 control-label">Marca</label>
