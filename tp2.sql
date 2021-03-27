@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2020 a las 08:46:37
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.4
+-- Host: 127.0.0.1
+-- Generation Time: Mar 27, 2021 at 10:54 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,12 +18,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `tp2`
+-- Database: `tp2`
 --
 
 DELIMITER $$
 --
--- Procedimientos
+-- Procedures
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Busquedaproductofiltros` (IN `_nom` VARCHAR(100), IN `_mc` VARCHAR(100), IN `_cat` VARCHAR(100), IN `_subcat` VARCHAR(100), IN `_desh` BOOLEAN)  SELECT 
 		  p.id_producto id_producto , 
@@ -94,8 +94,8 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Estructura Stand-in para la vista `categ`
--- (Véase abajo para la vista actual)
+-- Stand-in structure for view `categ`
+-- (See below for the actual view)
 --
 CREATE TABLE `categ` (
 `id_categoria` int(11)
@@ -107,8 +107,8 @@ CREATE TABLE `categ` (
 -- --------------------------------------------------------
 
 --
--- Estructura Stand-in para la vista `coment`
--- (Véase abajo para la vista actual)
+-- Stand-in structure for view `coment`
+-- (See below for the actual view)
 --
 CREATE TABLE `coment` (
 `id_comentario` int(11)
@@ -124,8 +124,8 @@ CREATE TABLE `coment` (
 -- --------------------------------------------------------
 
 --
--- Estructura Stand-in para la vista `marc`
--- (Véase abajo para la vista actual)
+-- Stand-in structure for view `marc`
+-- (See below for the actual view)
 --
 CREATE TABLE `marc` (
 `id_marca` int(11)
@@ -136,7 +136,7 @@ CREATE TABLE `marc` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `perfil`
+-- Table structure for table `perfil`
 --
 
 CREATE TABLE `perfil` (
@@ -145,7 +145,7 @@ CREATE TABLE `perfil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `perfil`
+-- Dumping data for table `perfil`
 --
 
 INSERT INTO `perfil` (`id`, `nombre`) VALUES
@@ -158,7 +158,7 @@ INSERT INTO `perfil` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `perfil_permisos`
+-- Table structure for table `perfil_permisos`
 --
 
 CREATE TABLE `perfil_permisos` (
@@ -168,7 +168,7 @@ CREATE TABLE `perfil_permisos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `perfil_permisos`
+-- Dumping data for table `perfil_permisos`
 --
 
 INSERT INTO `perfil_permisos` (`id`, `perfil_id`, `permiso_id`) VALUES
@@ -192,7 +192,7 @@ INSERT INTO `perfil_permisos` (`id`, `perfil_id`, `permiso_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `permisos`
+-- Table structure for table `permisos`
 --
 
 CREATE TABLE `permisos` (
@@ -202,7 +202,7 @@ CREATE TABLE `permisos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `permisos`
+-- Dumping data for table `permisos`
 --
 
 INSERT INTO `permisos` (`id`, `nombre`, `cod`) VALUES
@@ -215,7 +215,7 @@ INSERT INTO `permisos` (`id`, `nombre`, `cod`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `permisos2`
+-- Table structure for table `permisos2`
 --
 
 CREATE TABLE `permisos2` (
@@ -224,7 +224,7 @@ CREATE TABLE `permisos2` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `permisos2`
+-- Dumping data for table `permisos2`
 --
 
 INSERT INTO `permisos2` (`id`, `nombre`) VALUES
@@ -239,8 +239,8 @@ INSERT INTO `permisos2` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura Stand-in para la vista `prod`
--- (Véase abajo para la vista actual)
+-- Stand-in structure for view `prod`
+-- (See below for the actual view)
 --
 CREATE TABLE `prod` (
 `id_producto` int(11)
@@ -256,7 +256,7 @@ CREATE TABLE `prod` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -272,11 +272,11 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `usuario`, `clave`, `email`, `tipo`, `activo`, `salt`) VALUES
-(1, 'Admin', 'Sistema', 'admin', '207acd61a3c1bd506d7e9a4535359f8a', 'admin@carrito.com', 1, 1, 'salt'),
+(1, 'Admin', 'Sistema', 'admin', '0dde5185db7da5c81f0fa71696506e4f', 'admin@carrito.com', 1, 1, 'salt'),
 (20, 'adrian', 'balquinta', 'adrian.balquinta', 'd0e1c75ebb04e671cd5d0d224a570e90', 'adrian@gmail.com', 0, 1, '5eed717ba1e55'),
 (21, 'juan', 'perez', 'juan.perez', '0d2846c41a4cdc8bbd704042f4a1f9e0', '', 0, 0, '5eedb9b04f111'),
 (22, 'juan', 'perez', 'juan.perez', '6d16c598a274ba27fd491d94b578dbc5', 'adrian@gmail.com', 0, 1, '5eedb9ddf3af2'),
@@ -287,7 +287,7 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `usuario`, `clave`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios_perfiles`
+-- Table structure for table `usuarios_perfiles`
 --
 
 CREATE TABLE `usuarios_perfiles` (
@@ -297,24 +297,24 @@ CREATE TABLE `usuarios_perfiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `usuarios_perfiles`
+-- Dumping data for table `usuarios_perfiles`
 --
 
 INSERT INTO `usuarios_perfiles` (`id`, `usuario_id`, `perfil_id`) VALUES
-(1, 1, 1),
-(2, 1, 2),
-(3, 1, 3),
 (29, 20, 2),
 (32, 26, 1),
 (34, 22, 3),
 (38, 28, 12),
 (39, 27, 3),
-(41, 29, 13);
+(41, 29, 13),
+(42, 1, 1),
+(43, 1, 2),
+(44, 1, 3);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios_tipos`
+-- Table structure for table `usuarios_tipos`
 --
 
 CREATE TABLE `usuarios_tipos` (
@@ -323,7 +323,7 @@ CREATE TABLE `usuarios_tipos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `usuarios_tipos`
+-- Dumping data for table `usuarios_tipos`
 --
 
 INSERT INTO `usuarios_tipos` (`id_tipo`, `tipo`) VALUES
@@ -334,7 +334,7 @@ INSERT INTO `usuarios_tipos` (`id_tipo`, `tipo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura para la vista `categ`
+-- Structure for view `categ`
 --
 DROP TABLE IF EXISTS `categ`;
 
@@ -343,7 +343,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Estructura para la vista `coment`
+-- Structure for view `coment`
 --
 DROP TABLE IF EXISTS `coment`;
 
@@ -352,7 +352,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Estructura para la vista `marc`
+-- Structure for view `marc`
 --
 DROP TABLE IF EXISTS `marc`;
 
@@ -361,100 +361,100 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Estructura para la vista `prod`
+-- Structure for view `prod`
 --
 DROP TABLE IF EXISTS `prod`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `prod`  AS  select `produccion`.`productos`.`id_producto` AS `id_producto`,`produccion`.`productos`.`nombre` AS `nombre`,`produccion`.`productos`.`descripcion` AS `descripcion`,`produccion`.`productos`.`imagen` AS `imagen`,`produccion`.`productos`.`id_marca` AS `id_marca`,`produccion`.`productos`.`id_categoria` AS `id_categoria`,`produccion`.`productos`.`precio` AS `precio`,`produccion`.`productos`.`deshabilitado` AS `deshabilitado` from `produccion`.`productos` ;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `perfil`
+-- Indexes for table `perfil`
 --
 ALTER TABLE `perfil`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `perfil_permisos`
+-- Indexes for table `perfil_permisos`
 --
 ALTER TABLE `perfil_permisos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `permisos`
+-- Indexes for table `permisos`
 --
 ALTER TABLE `permisos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `permisos2`
+-- Indexes for table `permisos2`
 --
 ALTER TABLE `permisos2`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
--- Indices de la tabla `usuarios_perfiles`
+-- Indexes for table `usuarios_perfiles`
 --
 ALTER TABLE `usuarios_perfiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuarios_tipos`
+-- Indexes for table `usuarios_tipos`
 --
 ALTER TABLE `usuarios_tipos`
   ADD PRIMARY KEY (`id_tipo`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `perfil`
+-- AUTO_INCREMENT for table `perfil`
 --
 ALTER TABLE `perfil`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT de la tabla `perfil_permisos`
+-- AUTO_INCREMENT for table `perfil_permisos`
 --
 ALTER TABLE `perfil_permisos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
--- AUTO_INCREMENT de la tabla `permisos`
+-- AUTO_INCREMENT for table `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `permisos2`
+-- AUTO_INCREMENT for table `permisos2`
 --
 ALTER TABLE `permisos2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios_perfiles`
+-- AUTO_INCREMENT for table `usuarios_perfiles`
 --
 ALTER TABLE `usuarios_perfiles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios_tipos`
+-- AUTO_INCREMENT for table `usuarios_tipos`
 --
 ALTER TABLE `usuarios_tipos`
   MODIFY `id_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
